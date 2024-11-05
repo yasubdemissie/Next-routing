@@ -8,9 +8,8 @@ function page() {
 
   return (
     <main>
-      <ul>
+      <ul className="news-list">
         <li>
-        {/* <buton type="button" onClick={()=> navigate.push('123')}></buton> */}
           <Link href={"news/123"}>Abebe Beso</Link>{" "}
         </li>
         <li>
