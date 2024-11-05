@@ -1,23 +1,22 @@
-'use client';
+"use client";
+import { DUMMY_NEWS } from "@/dummy-news";
 import Link from "next/link";
 // import { useRouter } from "next/router";
 
 function page() {
-
-    // const navigate = useRouter();
+  // const navigate = useRouter();
 
   return (
     <main>
       <ul className="news-list">
-        <li>
-          <Link href={"news/123"}>Abebe Beso</Link>{" "}
-        </li>
-        <li>
-          <Link href={"news/392"}>Awtaru Kebede</Link>{" "}
-        </li>
-        <li>
-          <Link href={"news/:3290"}>Temesgen Beyene</Link>{" "}
-        </li>
+        {DUMMY_NEWS.map((news) => (
+          <li key={news.id}>
+            <Link href={`news/${news.slug}`}>
+              <img src={`/images/news/${news.image}`} alt={news.title} />
+              <span>{news.title}</span>
+            </Link>{" "}
+          </li>
+        ))}
       </ul>
     </main>
   );
