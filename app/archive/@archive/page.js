@@ -9,7 +9,7 @@ function Archive() {
       <nav>
         <ul>
           {newsYear.map((year) => (
-            <li>
+            <li key={year}>
               <Link href={`/archive/${year}`}>{year}</Link>
             </li>
           ))}

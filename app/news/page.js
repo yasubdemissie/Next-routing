@@ -1,4 +1,5 @@
 "use client";
+import NewsList from "@/Components/NewsList";
 import { DUMMY_NEWS } from "@/dummy-news";
 import Link from "next/link";
 // import { useRouter } from "next/router";
@@ -8,16 +9,8 @@ function page() {
 
   return (
     <main>
-      <ul className="news-list">
-        {DUMMY_NEWS.map((news) => (
-          <li key={news.id}>
-            <Link href={`news/${news.slug}`}>
-              <img src={`/images/news/${news.image}`} alt={news.title} />
-              <span>{news.title}</span>
-            </Link>{" "}
-          </li>
-        ))}
-      </ul>
+      <h1>News</h1>
+      <NewsList news={DUMMY_NEWS} />
     </main>
   );
 }

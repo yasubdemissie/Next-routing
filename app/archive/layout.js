@@ -3,7 +3,7 @@ export default function layout({ archive, latest }) {
     <div>
       <h1>Archive News</h1>
       <section id="archive-filter">{archive}</section>
-      <section className="archive-latest">{latest}</section>
+      <section id="archive-latest">{latest}</section>
     </div>
   );
 }

@@ -1,13 +1,9 @@
-function Latest() {
+function latest() {
   return (
-    <header>
-      <nav>
-        <ul>
-          <li>Latest History</li>
-        </ul>
-      </nav>
-    </header>
+    <main>
+      <h2>Latest News</h2>
+    </main>
   );
 }
 
-export default Latest;
+export default latest;
