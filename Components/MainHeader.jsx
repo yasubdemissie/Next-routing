@@ -1,3 +1,5 @@
+import NavLink from "./NavLink";
+
 function MainHeader() {
   return (
     <header id="main-header">
@@ -8,9 +10,8 @@ function MainHeader() {
       </div>
       <nav>
         <ul>
-          <li>
-            <a href="/news">News</a>
-          </li>
+          <NavLink href="/archive">Archive</NavLink>
+          <NavLink href="/news">News</NavLink>
         </ul>
       </nav>
     </header>

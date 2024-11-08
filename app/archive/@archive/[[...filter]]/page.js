@@ -30,7 +30,7 @@ function YearPage({ params }) {
     <>
       <header id="archive-header">
         <nav>
-          {selectedYear === undefined ? (
+          {selectedYear === undefined ? ( 
             <ul>
               {newsYear.map((year) => (
                 <li key={year}>
