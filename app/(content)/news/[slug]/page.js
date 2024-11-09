@@ -1,11 +1,10 @@
-"use client";
-import { DUMMY_NEWS } from "@/dummy-news";
+import { getNewsItem } from "@/lib/news";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-function page({ params }) {
+async function page({ params }) {
   // const path = usePathname();
-  const news = DUMMY_NEWS.find((news) => news.slug === params.slug);
+  const news = await getNewsItem(params.slug);
 
   if (!news) {
     notFound();

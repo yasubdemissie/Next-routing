@@ -1,13 +1,13 @@
-import { getAllNews } from "@/lib/news";
+import { getNewsItem } from "@/lib/news";
 
-function NormalImage({ params }) {
+async function NormalImage({ params }) {
   const slug = params.slug;
-  const image = getAllNews().find((news) => news.slug === slug).image;
+  const Image = await getNewsItem(slug);
   return (
     <>
       <h2>Normal Image</h2>
       <div className="fullscreen-image">
-        <img src={`/images/news/${image}`} alt="Image you clicked" />
+        <img src={`/images/news/${Image.image}`} alt="Image you clicked" />
       </div>
     </>
   );
