@@ -1,11 +1,18 @@
 import NewsList from "@/Components/NewsList";
-import { DUMMY_NEWS } from "@/dummy-news";
+// import { DUMMY_NEWS } from "@/dummy-news";
 
-function page() {
+async function page() {
+  const response = await fetch("http://localhost:8081/news");
+
+  if (!response.ok) {
+    throw new Error("Something went wrong!");
+  }
+  const news = await response.json();
+
   return (
     <main>
       <h1>News</h1>
-      <NewsList news={DUMMY_NEWS} />
+      <NewsList news={news} />
     </main>
   );
 }
